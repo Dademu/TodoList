@@ -4,7 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList", "TodoList\TodoList.csproj", "{68CE2B23-CAC7-467A-BB37-E1B9E300C23E}"
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Models", "TodoList.Models\TodoList.Models.csproj", "{68CE2B23-CAC7-467A-BB37-E1B9E300C23E}"
+TodoList\TodoList.csproj
+TodoList.Models\TodoList.Models.csproj
+TodoList.API\TodoList.API.csproj
+TodoList.Tests\TodoList.Tests.csproj
 
 EndProject
 Global
