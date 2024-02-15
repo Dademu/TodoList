@@ -1,29 +1,38 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using TodoList.API.Models;
+using TodoList.API;
+using TodoList.Models;
+using TodoList.API.Controllers;
 
 namespace TodoList.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ToDoItemsController : ControllerBase
-    {
-        private readonly TodoListContext _context;
 
-        public ToDoItemsController(TodoListContext context)
+    {
+        private readonly List<ToDoItem> _toDoItems;
+
+        public ToDoItemsController()
         {
-            _context = context;
+            // Initialize the list of ToDoItems
+            _toDoItems = new List<ToDoItem>
+            {
+                new ToDoItem { Id = 1, Title = "Task 1", CompletedDate = null },
+                new ToDoItem { Id = 2, Title = "Task 2", CompletedDate = null },
+                new ToDoItem { Id = 3, Title = "Task 3", CompletedDate = null },
+                new ToDoItem { Id = 4, Title = "Task 4", CompletedDate = null },
+                new ToDoItem { Id = 5, Title = "Task 5", CompletedDate = null }
+            };
         }
 
-        // GET: api/ToDoItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ToDoItem>>> GetToDoItems()
+        public IList<ToDoItem> GetToDoItems()
         {
-            var toDoItems = await _context.ToDoItems.Where(item => item.CompletedDate == null).ToListAsync();
-            return toDoItems;
+            // Filter the ToDoItems with no CompletedDate set
+            var items = _toDoItems.Where(item => item.CompletedDate == null).ToList();
+            return (items);
         }
     }
 }

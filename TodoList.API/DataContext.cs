@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TodoList.API.Models;
+using TodoList.Models;
 
 namespace TodoList.API
 {

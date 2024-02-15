@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.AssemblyInfo.cs
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\Backend Class Projects\TodoList\TodoList.Api\obj\Debug\net8.0\TodoList.API.sourcelink.json

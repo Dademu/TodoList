@@ -1,24 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
-using TodoList.API.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using TodoList.Models;
+using TodoList.API;
 
 namespace TodoList.API.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
-    public class CreateToDoItemController : ControllerBase
+    [ApiController]
+    public class ToDoItemstoController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult CreateToDoItem([FromBody] ToDoItem todoItem)
+        private readonly DataContext _context;
+
+        public ToDoItemstoController(DataContext context)
         {
-            // Logic to create a new ToDoItem
-            // ...
-            _context.ToDoItems.Add(toDoItem);
-            await _context.SaveChangesAsync();
+            _context = context;
+        }
 
-            // Return a 201 Created status code along with the created ToDoItem
-            return CreatedAtAction(nameof(GetToDoItem), new { id = toDoItem.Id }, toDoItem);
-
-            return Ok();
+        // GET: api/ToDoItems
+        [HttpGet]
+        public async Task<IList<ToDoItem>> GetToDoItems()
+        {
+            return await _context.ToDoItems.Where(item => item.CompletedDate == null).ToListAsync();
         }
     }
 }
